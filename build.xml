@@ -1,0 +1,30 @@
+<project name="HelloWorld" basedir="." default="main">
+
+
+    <target name="clean">
+        <echo>Hello World Clean</echo>
+    </target>
+
+    <target name="compile">
+        <echo>Hello World Complile</echo>
+
+    </target>
+
+    <target name="jar" depends="compile">
+        <echo>Hello World Jar</echo>
+
+    </target>
+
+    <target name="run" depends="jar">
+        <echo>Hello World Run</echo>
+
+    </target>
+
+    <target name="clean-build" depends="clean,jar"/>
+
+    <target name="main" depends="clean,run">
+
+        <echo>Hello World Main</echo>
+    </target>
+
+</project>
